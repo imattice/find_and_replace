@@ -1,15 +1,15 @@
 describe('superFind', function() {
 
     it('finds a word within a given passage', function() {
-        expect(superFind('hello', 'hello my name is ike')).to.equal('hello')
+        expect(superFind('hello', 'hello my name is ike')).to.eql(['hello'])
     });
-    //
-    // it('finds multiple words within a passage', function() {
-    //     expect(superFind('cat', 'I live with one cat.  The cat belongs to my roommate. The cat is brown and has long cat hair.')).to.equal(['cat', 'cat', 'cat', 'cat'])
-    // });
-    //
+
+    it('finds multiple words within a passage', function() {
+        expect(superFind('cat', 'I live with one cat.  The cat belongs to my roommate. The cat is brown and has long cat hair.')).to.eql(['cat', 'cat', 'cat', 'cat'])
+    });
+
     // it('finds word regardless of captialization', function() {
-    //     expect(superFind('carbuncle', 'My roommate\'s cAt is named Carbuncle. carbuncle really likes to chase lasors.')).to.equal(['Carbuncle', 'carbuncle'])
+    //     expect(superFind('carbuncle', 'My roommate\'s cAt is named Carbuncle. carbuncle really likes to chase lasors.')).to.eql(['Carbuncle', 'carbuncle'])
     // });
 })
 
