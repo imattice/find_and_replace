@@ -1,15 +1,51 @@
 var findReplace = function(word, replacement, passage) {
-    var passage_array = passage.split(' ');
+    var split_passage = passage.split(' ');
 
-    for (var i = 0; i<=passage_array; i++){
-        if (word === passage_array[i])
-            var new_passage = passage_array.replace(passage_array[i], replacement)
+    for (var i = 0; i<=split_passage.length; i++){
+        if (word == split_passage[i]) {
+            return true;
         }
     }
-    // var new_passage = passage_array.toString();
-    console.log(new_passage);
-    // return new_passage;
-// }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

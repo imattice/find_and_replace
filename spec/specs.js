@@ -1,7 +1,11 @@
 describe('findReplace', function() {
     it('checks if a word is within a given passage', function() {
-        expect(findReplace('hello', 'hello hi bye')).to.equal(true);
+        expect(findReplace('hello','', 'hello hi bye')).to.equal('hello hi bye');
     });
+
+    // it('replaces word with replacement word', function() {
+    //     expect(findReplace('hello', 'howdy' 'hello hi bye')).to.equal('howdy hi bye');
+    // });
 });
 
 
