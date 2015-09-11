@@ -6,6 +6,10 @@ describe('findReplace', function() {
     it('replaces found word within a given passage', function() {
         expect(findReplace('plants', 'feet', 'Sometimes she will attack our plants.')).to.equal('Sometimes she will attack our feet.');
     });
+
+    it('replaces all words within a given passage', function() {
+        expect(findReplace('good', 'great','She is still a good cat, though.  Good cats can be hard to find.')).to.equal('She is still a great cat, though.  Great cats can be hard to find.')
+    });
 }
 
 
