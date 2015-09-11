@@ -3,9 +3,10 @@ var findReplace = function(word, replacement, passage) {
 
     for (var i = 0; i<=split_passage.length; i++){
         if (word == split_passage[i]) {
-            return true;
+            var new_passage = passage.replace(split_passage[i], replacement)
         }
     }
+    return new_passage;
 }
 
 
