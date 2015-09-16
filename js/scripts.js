@@ -1,12 +1,21 @@
 var findReplace = function(word, replacement, passage) {
     var split_passage = passage.split(' ');
+    var result = [];
+
 
     for (var i = 0; i<=split_passage.length; i++){
         if (word == split_passage[i]) {
-            var new_passage = passage.replace(split_passage[i], replacement)
+            var new_word = word.replace(split_passage[i], replacement)
+            // var new_passage = passage.replace(split_passage[i], replacement)
+            result.push(new_word);
+        } else {
+            result.push(split_passage[i]);
         }
     }
-    return new_passage;
+
+    var joined_result = result.join(' ');
+    var final_result = joined_result.slice(0, joined_result.length-1);
+    return final_result;
 }
 
 

@@ -4,13 +4,26 @@ describe('findReplace', function() {
     });
 
 //how to ensure tests still pass without making a new function
-    it('replaces word with replacement word', function() {
+    it('replaces single word with only one letter with replacement word', function() {
+        expect(findReplace('a', 'b', 'a')).to.equal('b');
+    });
+    it('replaces single word with replacement word', function() {
+        expect(findReplace('hello', 'howdy', 'hello')).to.equal('howdy');
+    });
+
+    it('replaces word in sentence with replacement word', function() {
         expect(findReplace('hello', 'howdy', 'hello hi bye')).to.equal('howdy hi bye');
     });
 
     it('replaces multiple words in passage with replacement word', function() {
         expect(findReplace('hello', 'howdy', 'hello hi hello bye hello')).to.equal('howdy hi howdy bye howdy');
     });
+
+    it('does not replace a word which is only a partial match', function() {
+        expect(findReplace('he', 'banana', 'hello')).to.equal('hello');
+    });
+    //negative outcomes, more specific cases. what could go wrong?
+    //punctuation
 });
 
 
